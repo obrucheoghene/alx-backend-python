@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 '''
-Task 0's module: The basics of async 
+Task 0's module: The basics of async
 '''
 import asyncio
 import random
@@ -8,7 +8,7 @@ import random
 
 async def wait_random(max_delay: int = 10) -> float:
     '''
-    The basics of async 
+    The basics of async
     '''
     wait_time = random.random() * max_delay
     await asyncio.sleep(wait_time)
