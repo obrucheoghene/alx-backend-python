@@ -23,7 +23,7 @@ class TestAccessNestedMap(unittest.TestCase):
         ]
     )
     def test_access_nested_map(self, nested_map, path, expected_output):
-        """_summary_
+        """test_access_nested_map
         """
         result = access_nested_map(nested_map, path)
         self.assertEqual(result, expected_output)
@@ -36,14 +36,14 @@ class TestAccessNestedMap(unittest.TestCase):
     )
     def test_access_nested_map_exception(self, nested_map, path,
                                          expected_output):
-        """_summary_
+        """test_access_nested_map_exception
         """
         with self.assertRaises(expected_output) as context:
             access_nested_map(nested_map, path)
 
 
 class TestGetJson(unittest.TestCase):
-    """_summary_
+    """TestGetJson
 
     Args:
                     unittest (_type_): _description_
@@ -55,7 +55,7 @@ class TestGetJson(unittest.TestCase):
         ]
     )
     def test_get_json(self, url, expected_output):
-        """_summary_
+        """test_get_json
         """
         mock_response = Mock()
         mock_response.json.return_value = expected_output
@@ -66,25 +66,25 @@ class TestGetJson(unittest.TestCase):
 
 
 class TestMemoize(unittest.TestCase):
-    """_summary_
+    """TestMemoize
 
     Args:
                     unittest (_type_): _description_
     """
 
     def test_memoize(self):
-        """_summary_
+        """test_memoize
 
         Returns:
                 _type_: _description_
         """
 
         class TestClass:
-            """_summary_
+            """TestClass
             """
 
             def a_method(self):
-                """_summary_
+                """a_method
 
                 Returns:
                         _type_: _description_
@@ -93,7 +93,7 @@ class TestMemoize(unittest.TestCase):
 
             @memoize
             def a_property(self):
-                """_summary_
+                """a_property
 
                 Returns:
                         _type_: _description_
